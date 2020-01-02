@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <input type="search" name="search" class="form-control" placeholder="Search"  (keyup)="searchUsers($event.target.value)" > 
+    </div> <br>
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let user of listOfAllUsers">
+            <div class="card card-boder">
+                <img [src]="user.avatar_url" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.login}}</h5>
+                    <button href="#" class="btn btn-primary" (click)="goToProfile(user.login)">Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <button href="#" class="btn btn-primary" routerLink="/home" >Back to Home</button>
+    <div class="mx-auto">
+        <h3>{{userName}}</h3>
+    </div>
+    <table class="table" *ngIf="repoList.length > 0" >
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Repo Name</th>
+                <th scope="col">Repo Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let repo of repoList;let index = index">
+                <td>
+                    {{index + 1}}
+                </td>
+                <td>
+                    {{repo.name}}
+                </td>
+                <td>
+                    <a [href]="repo.html_url" target="_blank"> {{repo.html_url}}</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
