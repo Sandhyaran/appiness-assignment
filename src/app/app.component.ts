@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sandy-assignment';
+  console.log('This is from cloud');
 }
